@@ -4,10 +4,21 @@
     <h1>test</h1>
     <h1>{{ $t('hello_from_localazy') }}</h1>
     {{ t('description') }}
-
+    <div>
+      <b-button variant="primary">
+        Test
+      </b-button><br>
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Primary
+      </button>
+    </div>
     <p @click="clicked">
       click
-    </p>{{ a }}
+    </p>
+    <p> {{ a }}</p>
     <div>
       <button @click="countStore.count--">
         -
@@ -23,6 +34,7 @@
         <button @click="changeLocale('ru')">
           ru
         </button>
+
         <button @click="changeLocale('en')">
           en
         </button>
@@ -43,11 +55,11 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+import { useDark, useToggle } from '@vueuse/core';
 definePageMeta({
   layout: 'start',
 });
-import { useI18n } from 'vue-i18n';
-import { useDark, useToggle } from '@vueuse/core';
 
 const countStore = useCountStore();
 const { t, locale, availableLocales } = useI18n();

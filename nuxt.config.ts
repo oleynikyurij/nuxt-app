@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       modules: [
         '@intlify/nuxt3',
         '@vueuse/nuxt',
+        'bootstrap-vue-3/nuxt',
         [
         '@pinia/nuxt',
         {
@@ -30,4 +31,8 @@ export default defineNuxtConfig({
           fallbackLocale: 'en'
         }
       },
-})
+      css: [
+        'bootstrap/dist/css/bootstrap.min.css',
+        "bootstrap-vue-3/dist/bootstrap-vue-3.css",
+      ],
+});
