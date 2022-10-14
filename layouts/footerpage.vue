@@ -1,9 +1,11 @@
 <template>
-  <Navbar />
-  <div class="container">
-    <NuxtPage />
+  <div>
+    <Navbar />
+    <div class="container">
+      <NuxtPage />
+    </div>
+    <Footer />
   </div>
-  <Footer />
 </template>
 <style scoped>
 .container {

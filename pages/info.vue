@@ -1,13 +1,10 @@
 <template>
-$END$
+  <div>info</div>
 </template>
 
-<script>
-export default {
-name: "info"
-}
+<script setup>
+definePageMeta({
+  layout: 'start',
+});
 </script>
 
-<style scoped>
-
-</style>

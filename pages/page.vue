@@ -1,11 +1,11 @@
 <template>
-$END$
+  <div>page 1</div>
 </template>
 
-<script>
-export default {
-name: "page.vue"
-}
+<script setup>
+definePageMeta({
+  layout: 'footerpage',
+});
 </script>
 
 <style scoped>
