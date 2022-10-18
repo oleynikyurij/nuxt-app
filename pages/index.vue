@@ -4,16 +4,22 @@
     <h1>test</h1>
     <h1>{{ $t('hello_from_localazy') }}</h1>
     {{ t('description') }}
-    <div>
+    <div class="d-flex justify-content-between">
       <b-button variant="primary">
         Test
-      </b-button><br>
+      </b-button>
       <button
         class="btn btn-primary"
         type="button"
       >
         Primary
       </button>
+      <b-button
+        variant="primary"
+        @click="$router.push({path:'123'})"
+      >
+        b-button
+      </b-button>
     </div>
     <p @click="clicked">
       click
