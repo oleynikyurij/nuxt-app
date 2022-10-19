@@ -1,8 +1,15 @@
 <template>
   <div>
     <div>info</div>
-    <div>
+    <div class="m-3 w-25">
+      <Multiselect
+        class="custom-select"
+        :options="options"
+      />
+    </div>
+    <div class="m-3">
       <VueMultiselect
+
         :options="options"
       />
     </div>
@@ -14,6 +21,9 @@
 </template>
 
 <script setup>
+ import Multiselect from '@vueform/multiselect';
+ import VueMultiselect from 'vue-multiselect';
+
 definePageMeta({
   layout: 'start',
 });
@@ -51,4 +61,10 @@ const columns = [
       ];
        // dateOutputFormat: 'MMM dd yy',
 </script>
-
+<style scoped lang="scss">
+.custom-select {
+  &.multiselect {
+    display: flex;
+  }
+}
+</style>
